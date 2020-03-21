@@ -7,6 +7,7 @@ The challenge is to scrape new images for the Mars Hemispheres, add them to Mong
 
 ### 1) Scraping Mars Hemispheres Images and Saving Data to MongoDB 
 The new code is added to the Jupyter Notebook file which is included in this repo (file: Mission-to-Mars-Challenge.ipynb), and a screenshot is attached here. The new code does: 
+- Find the right link on the page, and click the link
 - Scrape four images 
 - Add the title and url link to a list with four dictionaries
 - Insert the new list to the MongoDB mars_app database 
