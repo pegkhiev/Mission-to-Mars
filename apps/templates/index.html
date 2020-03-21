@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv='X-UA-Compatible' content = "ie=edge"/>
+    <title>Mission to Mars</title>
+    <link rel = 'stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+</head>
+<body>
+  <div class = 'container'>
+    <div class = 'jumbotron text-center'>
+        <h1>Mission to Mars</h1>
+        <p><a class = 'btn btn-primary btn-lg' 
+            href = '/scrape' role = 'button'>
+        <!-- btn = 3 classes, using a button, using pri colors -->
+        <!-- and the button is large -->
+            Scrape New Data</a></p>
+    </div>
+  </div>
+        <!-- Mars News -->
+    <div class="album py-5 bg-light">
+        <div class = 'container'>
+            <div class = 'row' id = 'mars-news'>
+                <div class = 'col-md-12'>
+<!-- md = midsize resolution  -->
+                    <div class = 'media'>
+                         <div class = 'media-body'>
+                
+  <!-- 'media' tells bootstrap to display content as media
+  'media-body' is inserting media within the body -->
+                        <h2>Latest Mars News</h2>
+                            <h4 class = 'media-heading'>{{mars.news_title}}</h4>               
+                            <h5>{{mars.news_paragraph}}</h5>
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <hr>
+  <!-- Hemisphere Images -->
+  <div class = 'container'>
+    <div class = 'row' id = 'mars-hemisphere-image'>
+        <div class = 'col-md-12'>
+        <!-- <div class = 'ml-5 pl-5'> -->
+            <h2>Mars Hemispheres Images</h2>
+        </div>
+    </div> 
+        <div class="row">
+            <div class="col-md-3">
+                <div class = 'thumbnail'style = 'width:100%; height:auto;'>
+                    <img src = {{mars.hemisphere_url1}} class = "img-responsive" alt = 'Hemisphere image 1'>
+                    <div class = "caption">
+                        <h5 class = 'text-muted'>{{mars.hemisphere_title1}}</h5>
+                                <div class="mx-auto text-center" >
+                                <button><a type = "button" class = "btn btn-sm btn-outline-secondary"
+                                    href = {{mars.hemisphere_url1}}>View</a></button>
+                                </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class = 'thumbnail'style = 'width:100%; height:auto;'>
+                    <img src = {{mars.hemisphere_url2}} class = "img-responsive" alt = 'Hemisphere image 2'>
+                    <div class = "caption">
+                        <h5 class = 'text-muted'>{{mars.hemisphere_title2}}</h5>
+                       
+                                <div class="mx-auto text-center">
+                                <button><a type = "button" class = "btn btn-sm btn-outline-secondary"
+                                    href = {{mars.hemisphere_url2}}>View</a></button>
+                                </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class = 'thumbnail'style = 'width:100%; height:auto;'>
+                    <img src = {{mars.hemisphere_url3}} class = "img-responsive" alt = 'Hemisphere image 3'>
+                    <div class = "caption">
+                        <h5 class = 'text-muted'>{{mars.hemisphere_title3}}</h5>
+                                <div class="mx-auto text-center">
+                                <button><a type = "button" class = "btn btn-sm btn-outline-secondary"
+                                    href = {{mars.hemisphere_url3}}>View</a></button>
+                                </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class = 'thumbnail'style = 'width:100%; height:auto;'>
+                    <img src = {{mars.hemisphere_url4}} class = "img-responsive" alt = 'Hemisphere image 4'>
+                    <div class = "caption">
+                        <h5 class = 'text-muted'>{{mars.hemisphere_title4}}</h5>
+                                <div class="mx-auto text-center">
+                                <button><a type = "button" class = "btn btn-sm btn-outline-secondary"
+                                    href = {{mars.hemisphere_url4}}>View</a></button>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+  <!-- Featured Image     -->
+  <div class = 'row' id = 'mars-featured-image'>
+      <div class = 'col-md-8'>
+        <div class = 'media'>
+            <div class = 'media-body'>
+                 <h2>Featured Mars Image</h2>
+        
+                <img src ='{{mars.featured_image | default('static/images/error.png', true)}}' 
+                class = 'img-responsive'
+                 alt = 'Responsive image'/>
+            </div>
+        </div>
+          
+      </div>
+      <div class = col-md-4>
+      <!-- Mars Facts (needs to be nested under div row
+      because the image uses col-md-8, 8 col out of 12
+      and mars facts will use the remaining 4, but 
+      on same row, hence needs to be nested.) -->
+        
+        <div class = 'row' id = 'mars-facts'>
+            <div class = 'col-md-12'> 
+                <h2>Mars Facts</h2>
+                <div class="table-responsive-md">
+                    <table class='table'>
+                {{ mars.facts| safe }}
+                    </table>  
+                </div>      
+            </div>
+    </div>
+  </div>
+</div>
+</div>
+</body> 
+</html>
