@@ -1,6 +1,6 @@
 # Mission-to-Mars
 
-##Challenge
+## Challenge
 
 ### Background 
 The challenge is to scrape new images for the Mars Hemispheres, add them to MongoDB, and add new elements to the Flask app using Bootstrap elements. 
