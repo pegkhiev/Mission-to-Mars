@@ -82,7 +82,7 @@ def featured_image(browser):
     img_url = f"https://jpl.nasa.gov{image_url_rel}"
     return img_url
 
-def mars_facts():
+def mars_facts(classes=["table-bordered", "table-striped"]):
     # Add try/except for error handling
     # try:
         # Use 'read_html' to scrape the facts table into a dataframe
