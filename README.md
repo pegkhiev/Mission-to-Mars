@@ -14,9 +14,11 @@ The new code is added to the Jupyter Notebook file which is included in this rep
 <img width=500px alt="Jupyter code" src = "https://github.com/pegkhiev/Mission-to-Mars/blob/master/images/juputer_code.png">
 
 ### 2) Add New Elements to the Flask App
-The complete code is included in the file in this repo.  Below are the two screenshots of the new elements added to the flask app. New elements added are: 
+The complete code is included in the file in this repo.  Below are the two screenshots of the new elements added to the flask app. 
 
 <img width=400px alt="homepage" src = "https://github.com/pegkhiev/Mission-to-Mars/blob/master/images/Homepage.png"><<img width=400px alt="scraping page" src = "https://github.com/pegkhiev/Mission-to-Mars/blob/master/images/scraping_page.png">
+
+The following Bootstrap elements are used: 
 
 2.1) Adding four hemispheres images as thumbnails
 
